@@ -42,7 +42,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.view = view
         
         autoLayout()
-        view.addSubview(textField)
+        view.addSubview(searchField)
         view.addSubview(dogFoodCollectionView)
         
     }
@@ -60,12 +60,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func autoLayout() {
-        textField.bottomAnchor.constraint(equalTo: dogFoodCollectionView.topAnchor, constant: 0).isActive = true
-        textField.widthAnchor.constraint(equalToConstant: view.frame.width - 20).isActive = true
-        textField.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        
-        dogFoodCollectionView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 10).isActive = true
-        
     }
 }
 
